@@ -21,10 +21,23 @@
 }
 
 #resume {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 50px;
+}
+
+.high{
+    /* font-size: 22px; */
+    padding: 30px;
+    color: red;
+} 
+
+#contact h1{
+    text-align: center;
+    padding: 40px;
+    /* background-color: black; */
+    /* font-size: 25px */
 }
 
 
@@ -40,5 +53,12 @@
         padding: 40px;
         /* background-color: black; */
         font-size: 25px
+    }
+
+    #resume {
+        font-size: 20px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 50px;
     }
 }
