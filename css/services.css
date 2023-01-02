@@ -12,7 +12,7 @@
 #services > div {
     padding-top: 30px;
     text-align: center;
-    color: red
+    /* color: red */
 }
 
 #services span{
@@ -58,6 +58,27 @@
         /* text-align: center; */
     }
 
+    #services p{
+        font-size: 18px;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 490px){
+    #services h1{
+        font-size: 25px;
+    }
+
+    #services span{
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 22px;
+        /* text-align: center; */
+    }
+
+    
     #services p{
         font-size: 18px;
         padding-top: 10px;

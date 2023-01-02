@@ -1,6 +1,7 @@
 #contact h1{
     text-align: center;
-    padding: 40px
+    /* padding-bottom: 0px */
+    margin-bottom: -15px;
     /* background-color: black; */
 }
 #con{
@@ -17,6 +18,13 @@
     background-color: black;
     color: whitesmoke;
 
+}
+
+#resume {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 
