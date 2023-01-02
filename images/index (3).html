@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav id="nav">
+        <div id="con2"><a href=""></a>Bb</div>
+       <input id="con3" type="text" name="">
+        <div id="con4"><a href="#" onclick="rest()"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+        <ul id="con5">
+            <li><a class="diff" href="pages/products.html">CATEGORIES</a></li>
+            <li><a href=""><i class="fa-regular fa-user low"></i>Acount</a></li>
+            <li><a href=""><i class="fa-sharp fa-solid fa-question low"></i>Help</a></li>
+            <li><a href=""><i class="fa-solid fa-cart-shopping low"></i>Cart</a></li>
+        </ul>
+    </nav>
+  
+    <div id="total">
+        <nav id="div">
+         <!-- categories -->
+            <!-- <ul>
+            <li><a onclick="ok()" id="p1" href="#">smartphones</a></li>
+            <li><a onclick="ok1()" href="#" id="p2">laptops</a></li>
+            <li><a onclick="ok2()" href="#" id="p3">fragrances</a></li>
+            <li><a onclick="ok3()" href="#" id="p4">skincare</a></li>
+            <li><a onclick="ok4()" href="#" id="p5">groceries</a></li>
+            <li><a onclick="ok5()" href="#" id="p6">home-decoration</a></li>
+            <li><a onclick="ok6()"  href="#" id="p7">furniture</a></li>
+            <li><a onclick="ok7()" href="#" id="p8">tops</a></li>
+            <li><a onclick="ok8()" href="#" id="p9">womens-dresses</a></li>
+            <li><a onclick="ok9()" href="#" id="p10">womens-shoes</a></li>
+            <li><a onclick="click()" href="">parada</a></li>           
+            </ul> -->
+        </nav>
+
+        
+        <div id="penego">
+           
+            
+         <div id="main">
+            <p><span id="image-des"></span></p>
+            <p id="hm">PRICE: <span id="img-price"></span></p>
+            <p id="hmm">RATING: <span id="img-rating"></span></p>
+            <p id="hmmm">BRAND: <span id="img-brand"></span></p>
+         </div>
+
+        
+         <div id="div3">
+           
+           </div>
+
+        </div>
+
+        <div id="contained">
+            <div id="container">
+
+           
+    
+                <div id="img1">
+                    <img src="images/Desktop_homepage_slider__712x384_(Shop_Now).jpg" alt="">
+                </div> 
+    
+              
+                
+             
+    
+                <div id="img2">
+                    <img src="images/Slider_712x384.jpg" alt="">
+                    <img src="images/SX_712x384_(CTA_=_yes)_–_1.jpg" alt="">
+                </div>
+                
+               
+    
+            </div>
+    
+        </div>
+        <nav id="nav2">
+            <!-- <ul>
+                <li><a onclick="ok10()" href="#" id="p11">mens-shirts</a></li>
+                <li><a onclick="ok11()" href="#" id="p12">mens-shoes</a></li>
+                <li><a onclick="ok12()" href="#" id="p13">mens-watches</a></li>
+                <li><a onclick="ok13()" href="#" id="p14">womens-watches</a></li>
+                <li><a onclick="ok14()" href="#" id="15">womens-bags</a></li>
+                <li><a onclick="ok15()" href="#" id="p16">womens-jewellery</a></li>
+                <li><a onclick="ok16()" href="#" id="p17">sunglasses</a></li>
+                <li><a onclick="ok17()" href="#" id="p18">automotive</a></li>
+                <li><a onclick="ok18()" href="#" id="p19">motorcycle</a></li>
+                <li><a onclick="ok19()" href="#" id="p20">lighting</a></li>
+            </ul> -->
+        </nav>
+
+    </div>
+   
+    <h3 id="err"></h3>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+
+   function click(){
+    document.getElementById('container').style.display = "none"
+   }
+    
+
+
+    document.getElementById('penego').style.display = "none"
+    
+    function rest(){
+
+        // 
+       
+        document.getElementById('penego').style.display = "block"
+        document.getElementById('contained').style.display = "none"
+        let image = ""
+        let input = document.getElementById('con3').value
+     axios.get('https://dummyjson.com/products/search?q='+ `${input}`).then(results=>{
+        document.getElementById('main').style.display = "inline"
+        // if(results.limit = "0"){
+        //     console.log(results)
+        //     // document.getElementById('main').style. display = "none"
+        //     // document.getElementById('contained').style.display = "none"
+        //     document.getElementById('err').innerHTML = "oops, we do not have this product. Try searching for another product."
+        //     // document.getElementById('hm').style.display = "none"
+        //     // document.getElementById('hmm').style.display = "none"
+        //     // document.getElementById('hmmm').style.display = "none"
+        //     document.getElementById('main').style.display = "none"
+        // }
+        // else{
+        //     document.getElementById('main').style.display = ""
+        // }
+            
+       
+       results.data.products[0].images.length != 0
+            document.getElementById('penego').style.display = "block"
+        console.log(results.data.products[0])
+        console.log(results.data.products[0].images.length)
+        document.getElementById('img-price').innerHTML =  "$" + results.data.products[0].price
+        document.getElementById('img-rating').innerHTML = results.data.products[0].rating
+        document.getElementById('img-brand').innerHTML = results.data.products[0].brand
+        // document.getElementById('').innerHTML = 
+        document.getElementById('err').innerHTML = ""
+     document.getElementById('image-des').innerHTML =  results.data.products[0].description
+    let contt = document.getElementById("div3")
+    contt.innerHTML = ""
+
+
+    for (let i=0; i<results.data.products[0].images.length; i++) {
+        let image = 
+   ` <div id="okayed">
+   
+    <img id="img3" class="img3" src="${results.data.products[0].images[i]}">
+    </div>
+   
+   
+   
+   `
+   if(results.limit = "0"){
+            console.log(results)
+            // document.getElementById('main').style. display = "none"
+            // document.getElementById('contained').style.display = "none"
+            document.getElementById('err').innerHTML = "oops, we do not have this product. Try searching for another product."
+            // document.getElementById('hm').style.display = "none"
+            // document.getElementById('hmm').style.display = "none"
+            // document.getElementById('hmmm').style.display = "none"
+            // document.getElementById('main').style.display = "none"
+        }
+   document.getElementById('main').style.display = "inline"
+
+   contt.innerHTML += image
+  
+}
+
+    //    contt.src = results.data.products[0].images[0]
+    //    console.log(contt.src)
+     }).catch(err=>{
+        console.log(err)
+        // document.getElementById('total').style.display = "none"
+        // document.getElementById('err').innerHTML = err
+     })
+
+    }
+
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

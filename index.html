@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<nav id="nav">
+    <div id="img-con">
+        <img src="images/B (1).svg" alt="">
+    </div>
+
+   <a onclick="abeg()" href="#" id="menu"><i class="fa-solid fa-bars"></i></a>
+    <ul id="hide">
+        <li><a href="">Home</a></li> 
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="">Contact</a></li>       
+    </ul>
+
+    
+
+    
+</nav>    
+
+<section>
+    
+<div id="home-txt">
+   <h3 id="check">IYIOLA BLESSING</h3>
+   <p>Front-end Developer</p>
+   <p>Content-Creator</p>
+
+</div>
+
+<div id="home-img">
+   <img src="images/IMG_20201213_112128_892_2.jpg" alt="">
+</div>
+</section>
+
+
+<div id="services">
+    <h1>SERVICES</h1>
+    <div id="divide"></div>
+    <div>
+        <span>Web Design & Development</span><i class="fa-sharp fa-solid fa-globe low"></i>
+        <p>We develop top notch and responsive web applications for organizations and individuals using modern, suitable technologies and methodologies</p>
+    </div>
+
+    <div>
+        <span>Graphic Design</span><i class="fa-solid fa-pen-to-square low"></i>
+        <p>We create visual concepts, by using modern software tools, to communicate ideas that inspire, inform, or captivate consumers</p>
+    </div>
+
+    <div class="bb">
+        <span>Digital Marketing</span><i class="fa-solid fa-cart-shopping low"></i>
+        <p>We create visual concepts, by using modern software tools, to communicate ideas that inspire, inform, or captivate consumers.</p>
+    </div>
+    
+    <div>
+        <span>Branding</span><i class="fa-regular fa-pen-to-square low"></i>
+        <p>We provide a complete brand revamp for your business, or a fresh new strategic approach to your marketing from brand positioning, logo design, design systems, and packaging.</p>
+    </div>
+
+</div>
+
+<div id="projects">
+    <div id="pro-1">
+        <h1>Project</h1>
+
+    </div>
+
+    <div id="divider"></div>
+
+    <div id="pro-2">
+        <div class="p1">
+            <div><img src="images/calculator.png" alt=""></div>
+            <span>Calculator</span>
+            <button><a href="https://bishop-bb.github.io/real-estate/">Click here to view</a></button>
+          
+        
+        </div>
+
+
+        <div class="p1">
+            <div><img src="images/beauty.png" alt=""></div>
+            <span>Beauty Web Page</span>
+            <button><a href="https://bishop-bb.github.io/beauty-webpage/">Click here to view</a></button>
+        </div>
+
+        <div class="p1">
+            <div><img src="images/dictionary.png" alt=""></div>
+            <span>Dictionary</span>
+            <button><a href="https://bishop-bb.github.io/beauty-webpage/">Click here to view</a></button>
+        </div>
+
+        <div class="p1">
+            <div><img src="images/e-commerce.png" alt=""></div>
+            <span>E-commerce Web Page</span>
+            <button><a href="https://bishop-bb.github.io/beauty-webpage/">Click here to view</a></button>
+        </div>
+
+        <div class="p1">
+            <div><img src="images/oic-hub-original.png" alt=""></div>
+            <span>OIC-Hub web page</span>
+            <button><a href="https://bishop-bb.github.io/beauty-webpage/">Click here to view</a></button>
+        </div>
+
+        <div class="p1">
+            <div><img src="images/baba ijebu.png" alt=""></div>
+            <span>Baba Ijebu</span>
+            <button><a href="https://bishop-bb.github.io/beauty-webpage/">Click here to view</a></button>
+        </div>
+
+    </div>
+</div>
+
+<div id="contact">
+    <h1>CONTACT</h1>
+
+    <div id="con">
+        <a href="mailto:iyiolablessing98@gmail.com"><i class="fa-regular fa-envelope high"></i></a>
+        <a href="https://web.facebook.com/me/"><i class="fa-brands fa-facebook high"></i></a>
+        <a href="https://www.instagram.com/blessing_iyiola"><i class="fa-brands fa-instagram high"></i></a>
+        <a href="https://wa.me/(+234)8164900271"><i class="fa-brands fa-whatsapp high"></i></a>
+    </div>
+</div>
+
+
+
+<script>
+    
+    function myFunction(x) {
+  if (x.matches) { 
+    document.getElementById('hide').style.display= "none";
+  } 
+}
+    var x = window.matchMedia("(max-width: 490px)")
+    myFunction(x)
+
+
+    
+//     function myFunction(y) {
+//   if (y.matches) { 
+//     document.getElementById('menu').style.display= "inlineBlock";
+//   } 
+// }
+//     var y = window.matchMedia("(max-width: 490px)")
+//     myFunction(y)
+
+    function abeg(){
+        document.getElementById('hide').style.display= "inline"
+        document.getElementById('hide').style.width = "100%"
+        document.getElementById('hide').style.textAlign = "center"
+        document.getElementById('hide').style.padding = "20px"
+    }
+    // abeg()
+</script>
+
+</body>
+</html>
