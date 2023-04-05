@@ -7,9 +7,10 @@
 
 
 nav{
-    background-color: whitesmoke;
+    background-color: rgb(44, 37, 37);
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
+    
 }
 
 
@@ -21,7 +22,7 @@ nav{
 }
 
 #img-con{
-    width: 35%;
+    width: 5%;
     align-self: center;
     
 }
@@ -30,10 +31,11 @@ nav{
 
 
 nav ul{
+    text-align: center;
     display: flex;
     /* flex-direction: column; */
-    width: 65%;
-    /* justify-content: center  ; */
+    width: 95%;
+    justify-content: center  ;
     align-self: center;
 }
 
@@ -45,7 +47,8 @@ nav a{
     text-decoration: none;
     font-size: 23px;
     padding: 20px;
-    color: blue
+    color: white;
+    font-style: italic;
     /* color: black */
     /* color: white*/
 }
